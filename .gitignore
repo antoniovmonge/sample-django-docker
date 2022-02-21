@@ -2,3 +2,4 @@
 *.py[cio]
 __pycache__
 env
+.env.dev
