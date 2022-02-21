@@ -5,4 +5,6 @@ redis
 psycopg2-binary==2.9.2
 celery
 gunicorn
+pytest-django==4.5.2
+pytest==6.2.5
 uvicorn[standard]

@@ -8,3 +8,7 @@ dev.env
 docker-compose.yml
 LICENSE
 README.md
+env
+.dockerignore
+Dockerfile
+Dockerfile.prod
