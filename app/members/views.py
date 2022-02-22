@@ -8,6 +8,11 @@ from .serializers import MemberSerializer
 
 
 class MemberList(APIView):
+    def get(self, request, format=None):
+        members = Member.objects.all()
+        serializer = MemberSerializer(members, many=True)
+        return Response(serializer.data)
+
     def post(self, request, format=None):
         serializer = MemberSerializer(data=request.data)
         if serializer.is_valid():

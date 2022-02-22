@@ -58,8 +58,8 @@ def test_add_member_invalid_json_keys(client):
 
 
 @pytest.mark.django_db
-def test_get_single_member(client):
-    member = Member.objects.create(
+def test_get_single_member(client, add_member):
+    member = add_member(
         name="Thomas A. Anderson - Neo",
         position="Microsoft Excel Expert",
         fun_fact="He likes Trinity and flying",
@@ -72,3 +72,21 @@ def test_get_single_member(client):
 def test_get_single_member_incorrect_id(client):
     resp = client.get("/api/members/foo")
     assert resp.status_code == 404
+
+
+@pytest.mark.django_db
+def test_get_all_members(client, add_member):
+    member_one = add_member(
+        name="Thomas A. Anderson - Neo",
+        position="Microsoft Excel Expert",
+        fun_fact="He likes Trinity and flying",
+    )
+    member_two = add_member(
+        "Elliot Alderson",
+        "Microsoft Word Intern",
+        "Learning to use the keyboard looking only at the screen",
+    )
+    resp = client.get("/api/members/")
+    assert resp.status_code == 200
+    assert resp.data[0]["name"] == member_one.name
+    assert resp.data[1]["name"] == member_two.name
