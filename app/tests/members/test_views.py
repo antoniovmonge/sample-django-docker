@@ -1,5 +1,3 @@
-import json
-
 import pytest
 
 from members.models import Member

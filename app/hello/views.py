@@ -1,10 +1,10 @@
-import socket
+# import socket
 
 from django.conf import settings
-from django.views.generic import TemplateView
 from django.utils import timezone
+from django.views.generic import TemplateView
 
-from . import tasks
+# from . import tasks
 
 
 class HelloView(TemplateView):

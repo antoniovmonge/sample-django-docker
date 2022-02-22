@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import MemberList, MemberDetail
+from .views import MemberDetail, MemberList
 
 urlpatterns = [
     path("api/members/", MemberList.as_view()),

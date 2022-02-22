@@ -1,12 +1,10 @@
 import argparse
-import os
+import logging
+# import os
 import socket
 import sys
 import time
-
 from subprocess import call
-
-import logging
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
@@ -61,7 +59,11 @@ class HostPort:
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Wait for host:port to be available. End with a '--' argument for full compatibility with the 'command' handling",
+        description="""
+            Wait for host:port to be available.
+            End with a '--' argument for full compatibility with
+            the 'command' handling
+            """,
     )
     parser.add_argument(
         "--debug",
