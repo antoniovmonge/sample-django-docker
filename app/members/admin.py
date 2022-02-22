@@ -1,3 +1,34 @@
-from django.contrib import admin
+# app/members/admin.py
 
-# Register your models here.
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as DefaultUserAdmin
+
+from .models import Member, CustomUser
+
+
+@admin.register(CustomUser)
+class UserAdmin(DefaultUserAdmin):
+    pass
+
+
+@admin.register(Member)
+class MemberAdmin(admin.ModelAdmin):
+    fields = (
+        "name",
+        "position",
+        "fun_fact",
+        "created_date",
+        "updated_date",
+    )
+
+    list_display = (
+        "name",
+        "position",
+        "fun_fact",
+        "created_date",
+        "updated_date",
+    )
+    readonly_fields = (
+        "created_date",
+        "updated_date",
+    )

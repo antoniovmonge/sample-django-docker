@@ -1,6 +1,3 @@
-# app/tests/test_foo.py
-
-
 import json
 
 from django.urls import reverse

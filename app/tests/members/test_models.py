@@ -1,5 +1,3 @@
-# app/tests/members/test_models.py
-
 import pytest
 
 from members.models import Member
