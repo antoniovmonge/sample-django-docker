@@ -2,6 +2,7 @@
 FROM python:3.10.1-slim-buster
 
 # set working directory
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # set environment variables
