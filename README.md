@@ -88,11 +88,12 @@ docker-compose exec members isort .
 docker-compose stop
 ```
 
-### 11. Stop the containers
+### 11. Bring down the containers
 
 ```bash
 docker-compose down
 ```
+
 
 ---
 ---
