@@ -10,7 +10,9 @@
 
 - Tests runs with coverage (`pytest-cov`)
 
-- Code check for quality issues via linter. (`flake8`, `black`, `isort`)
+- Code check for quality issues via linter `flake8`
+
+- Code standard formatting: `black`, `isort`
 
 - DataBase: `postgreSQL`
 
