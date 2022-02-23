@@ -1,6 +1,6 @@
 # Django Docker Sample - Antonio's Assessment
 
-Antonio's version - *members* application:
+## Antonio's "members" application:
 
 - Added a RESTful API with the Django REST Framework.
 
@@ -14,7 +14,7 @@ Antonio's version - *members* application:
 
 - DataBase: `postgreSQL`
 
-## Running the application in Docker
+## Running the application in `Docker`
 
 ### 1. There is one file needed to populate the database (not added to github for security reasons - included in `.gitignore`)
 
@@ -34,7 +34,7 @@ docker-compose build
 docker-compose up -d
 ```
 
-### 4. Seed the Database with the file `members.json`
+### 4. Seed the Database with the file `members.json` (this file is not included in the repository - I will send it via email)  
 
 ```bash
 docker-compose exec members python manage.py loaddata members.json 
