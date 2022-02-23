@@ -114,3 +114,66 @@ def test_remove_member(client, add_member):
 def test_remove_member_incorrect_id(client):
     resp = client.delete("/api/members/99/")
     assert resp.status_code == 404
+
+
+@pytest.mark.django_db
+def test_update_member(client, add_member):
+    member = add_member(
+        name="Elliot Alderson",
+        position="Microsoft Word Intern",
+        fun_fact="Learning touch typing",
+    )
+
+    resp = client.put(
+        f"/api/members/{member.id}/",
+        {
+            "name": "Elliot Alderson",
+            "position": "Microsoft Word Intern",
+            "fun_fact": "Learning touch typing",
+        },
+        content_type="application/json",
+    )
+    assert resp.status_code == 200
+    assert resp.data["name"] == "Elliot Alderson"
+    assert resp.data["fun_fact"] == "Learning touch typing"
+
+    resp_two = client.get(f"/api/members/{member.id}/")
+    assert resp_two.status_code == 200
+    assert resp_two.data["name"] == "Elliot Alderson"
+    assert resp_two.data["fun_fact"] == "Learning touch typing"
+
+
+@pytest.mark.django_db
+def test_update_member_incorrect_id(client):
+    resp = client.put(f"/api/members/99/")
+    assert resp.status_code == 404
+
+
+@pytest.mark.django_db
+def test_update_member_invalid_json(client, add_member):
+    member = add_member(
+        name="Elliot Alderson",
+        position="Microsoft Word Intern",
+        fun_fact="Learning touch typing",
+    )
+    resp = client.put(f"/api/members/{member.id}/", {}, content_type="application/json")
+    assert resp.status_code == 400
+
+
+@pytest.mark.django_db
+def test_update_member_invalid_json_keys(client, add_member):
+    member = add_member(
+        name="Elliot Alderson",
+        position="Microsoft Word Intern",
+        fun_fact="Learning touch typing",
+    )
+
+    resp = client.put(
+        f"/api/members/{member.id}/",
+        {
+            "name": "Elliot Alderson",
+            "position": "Microsoft Word Intern",
+        },
+        content_type="application/json",
+    )
+    assert resp.status_code == 400
