@@ -60,7 +60,7 @@ docker-compose exec members python manage.py createsuperuser
 docker-compose exec members pytest -p no:warnings --cov=.
 ```
 
-### 8. Lint
+<!-- ### 8. Lint
 
 ```bash
 docker-compose exec members flake8 .
@@ -80,15 +80,15 @@ docker-compose exec members isort . --check-only
 ```bash
 docker-compose exec members black --exclude=migrations .
 docker-compose exec members isort .
-```
+``` -->
 
-### 10. Stop the containers
+### 8. Stop the containers
 
 ```bash
 docker-compose stop
 ```
 
-### 11. Bring down the containers
+### 09. Bring down the containers
 
 ```bash
 docker-compose down
