@@ -88,3 +88,29 @@ def test_get_all_members(client, add_member):
     assert resp.status_code == 200
     assert resp.data[0]["name"] == member_one.name
     assert resp.data[1]["name"] == member_two.name
+
+
+@pytest.mark.django_db
+def test_remove_member(client, add_member):
+    member = add_member(
+        name="Thomas A. Anderson - Neo",
+        position="Microsoft Excel Expert",
+        fun_fact="He likes Trinity and flying",
+    )
+
+    resp = client.get(f"/api/members/{member.id}/")
+    assert resp.status_code == 200
+    assert resp.data["name"] == "Thomas A. Anderson - Neo"
+
+    resp_two = client.delete(f"/api/members/{member.id}/")
+    assert resp_two.status_code == 204
+
+    resp_three = client.get("/api/members/")
+    assert resp_three.status_code == 200
+    assert len(resp_three.data) == 0
+
+
+@pytest.mark.django_db
+def test_remove_member_incorrect_id(client):
+    resp = client.delete("/api/members/99/")
+    assert resp.status_code == 404

@@ -32,3 +32,8 @@ class MemberDetail(APIView):
         member = self.get_object(pk)
         serializer = MemberSerializer(member)
         return Response(serializer.data)
+
+    def delete(self, request, pk, format=None):
+        member = self.get_object(pk)
+        member.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
