@@ -117,7 +117,7 @@ def main():
     #
     hostports_left = []
     commands = []
-    first_pass = True
+    # first_pass = True
     for optval in options:
         if ":" not in optval or commands:
             commands.append(optval)

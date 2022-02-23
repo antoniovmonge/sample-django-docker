@@ -145,7 +145,7 @@ def test_update_member(client, add_member):
 
 @pytest.mark.django_db
 def test_update_member_incorrect_id(client):
-    resp = client.put(f"/api/members/99/")
+    resp = client.put("/api/members/99/")
     assert resp.status_code == 404
 
 
