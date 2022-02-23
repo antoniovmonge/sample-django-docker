@@ -8,4 +8,7 @@ omit =
   manage.py,
   *migrations/*,
   *tests/*,
+  *hello/*
+  *celery.py
+  *wait_entrypoint.py
 branch = True
