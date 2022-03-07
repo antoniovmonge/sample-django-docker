@@ -51,28 +51,6 @@ docker-compose exec members python manage.py createsuperuser
 docker-compose exec members pytest -p no:warnings --cov=.
 ```
 
-<!-- ### 8. Lint
-
-```bash
-docker-compose exec members flake8 .
-```
-
-### 9. Run `Black` and `isort`
-
-- Check options
-
-```bash
-docker-compose exec members black --exclude=migrations --check .
-docker-compose exec members isort . --check-only
-```
-
-- Make code changes
-
-```bash
-docker-compose exec members black --exclude=migrations .
-docker-compose exec members isort .
-``` -->
-
 ### 6. Stop the containers
 
 ```bash
