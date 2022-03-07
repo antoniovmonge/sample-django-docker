@@ -1,0 +1,101 @@
+[
+    {
+        "model": "members.member",
+        "pk": 1,
+        "fields": {
+            "name": "Phanos",
+            "position": "Co-founder & CEO",
+            "fun_fact": "Obsessed with the sea, movement, cooking and working on changing the world!",
+            "created_date": "2022-02-22T07:31:51.166432-05:00",
+            "updated_date": "2022-02-22T07:31:51.166444-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 2,
+        "fields": {
+            "name": "Stephanos",
+            "position": "Co-founder & Partnerships",
+            "fun_fact": "Quantity Surveying, Cost Consulting, Business Development, Construction Procurement, MRICS",
+            "created_date": "2022-02-22T07:32:10.674113-05:00",
+            "updated_date": "2022-02-22T07:32:10.674125-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 3,
+        "fields": {
+            "name": "Chandrashekar",
+            "position": "Co-founder & CTO",
+            "fun_fact": "Likes winter swimming, loves dogs and animals, mythology and politics. Trying to learn down hill skiing for 15 years.",
+            "created_date": "2022-02-22T07:32:34.894030-05:00",
+            "updated_date": "2022-02-22T07:32:34.894043-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 4,
+        "fields": {
+            "name": "Raquel",
+            "position": "Architect & Researcher",
+            "fun_fact": "Likes making music, arts, multiculturalism, traveling, foodie, fencing, and being in touch with nature.",
+            "created_date": "2022-02-22T07:33:00.744680-05:00",
+            "updated_date": "2022-02-22T07:33:00.744693-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 5,
+        "fields": {
+            "name": "Firehiwot",
+            "position": "Research Advisor",
+            "fun_fact": "Enjoys music, tennis and good food.",
+            "created_date": "2022-02-22T07:33:31.678678-05:00",
+            "updated_date": "2022-02-22T07:33:31.678689-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 6,
+        "fields": {
+            "name": "Nicolas",
+            "position": "Marketing Specialist",
+            "fun_fact": "Feels the best when travelling, skiing down mountains and camping in nature.",
+            "created_date": "2022-02-22T07:33:49.642976-05:00",
+            "updated_date": "2022-02-22T07:33:49.642989-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 7,
+        "fields": {
+            "name": "Ansh",
+            "position": "Full stack Developer",
+            "fun_fact": "Can be found playing cricket, traveling and exploring new music",
+            "created_date": "2022-02-22T07:34:14.933299-05:00",
+            "updated_date": "2022-02-22T07:34:14.933312-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 8,
+        "fields": {
+            "name": "Alessandro",
+            "position": "Advisor (Architecture & Academia)",
+            "fun_fact": "Feels italian just because of his name – he is not",
+            "created_date": "2022-02-22T07:34:37.245831-05:00",
+            "updated_date": "2022-02-22T07:34:37.245844-05:00"
+        }
+    },
+    {
+        "model": "members.member",
+        "pk": 9,
+        "fields": {
+            "name": "Francisco",
+            "position": "Advisor (Innovative materials)",
+            "fun_fact": "Foodie and aspirant cook who wakes up earlier to enjoy long breakfasts",
+            "created_date": "2022-02-22T07:34:55.570629-05:00",
+            "updated_date": "2022-02-22T07:34:55.570641-05:00"
+        }
+    }
+]

@@ -3,6 +3,5 @@
 __pycache__
 env
 .env.dev
-members.json
 app/htmlcov
 .coverage
