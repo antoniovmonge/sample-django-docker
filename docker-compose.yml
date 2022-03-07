@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+
   members:
     build: ./app
     command: python manage.py runserver 0.0.0.0:8000
@@ -12,6 +13,7 @@ services:
       - ./app/.env.dev
     depends_on:
       - members-db
+      
   members-db:
     image: postgres:14-alpine
     volumes:
