@@ -29,7 +29,7 @@ The `Dockerfile` and `docker-compose.yml` files are well commented, but use the 
 In the directory containing this README file, simply run `docker-compose up` to build the initial images and start the containers. The
 logs for each service will appear.  To end the services, press `Ctrl+C`
 
-The command `docker-compose -d` will run the services in the background so you can use the terminal for other things. 
+The command `docker-compose up -d` will run the services in the background so you can use the terminal for other things. 
 View the logs of the background processes with `docker-compose logs -f app tasks` (view the logs from the 'app' and 'tasks' services).
 When running in background, use the command `docker-compose down` to stop all of the services.
 
