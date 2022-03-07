@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
-    "rest_framework",
-    "members",
 ]
 
 MIDDLEWARE = [
@@ -126,11 +124,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/New_York"
 
 USE_I18N = True
 
-# USE_L10N = True
+USE_L10N = True
 
 USE_TZ = True
 
@@ -141,5 +139,3 @@ USE_TZ = True
 STATIC_URL = "/static/"
 # MEDIA_ROOT = "/code/media"
 # MEDIA_URL = "/media/"
-
-AUTH_USER_MODEL = "members.CustomUser"
