@@ -67,6 +67,7 @@ def test_get_single_member(client, add_member):
     assert resp.data["name"] == "Thomas A. Anderson - Neo"
 
 
+@pytest.mark.django_db
 def test_get_single_member_incorrect_id(client):
     resp = client.get("/api/members/foo")
     assert resp.status_code == 404
