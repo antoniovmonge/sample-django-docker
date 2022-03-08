@@ -39,11 +39,11 @@ docker-compose exec members python manage.py createsuperuser
 
 ### 4. Check everything is running
 
-- <http://localhost:8009/ping/>
-- <http://localhost:8009/hello/>
-- <http://localhost:8009/admin/>
-- <http://localhost:8009/api/members/>
-- <http://localhost:8009/api/members/3/>
+- <http://localhost:8000/ping/>
+- <http://localhost:8000/hello/>
+- <http://localhost:8000/admin/>
+- <http://localhost:8000/api/members/>
+- <http://localhost:8000/api/members/3/>
 
 ### 5. Run the tests with coverage
 
