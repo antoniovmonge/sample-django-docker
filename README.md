@@ -47,8 +47,16 @@ docker-compose exec app python manage.py createsuperuser
 
 ### 5. Run the tests with coverage
 
+Run all tests
+
 ```bash
 docker-compose exec app pytest -p no:warnings --cov=.
+```
+
+Selecting Tests (models, serializers, views...)
+
+```bash
+docker-compose exec app pytest -k models -p no:warnings
 ```
 
 ### 6. Stop the containers
