@@ -6,14 +6,14 @@ from members.models import Member
 @pytest.mark.django_db
 def test_member_model():
     member = Member(
-        name="Phanos Hadjikyriakou",
+        name="Phanos",
         position="Co-founder & CEO",
         fun_fact="""
             Obsessed with the sea, movement, cooking and working on changing the world!
             """,
     )
     member.save()
-    assert member.name == "Phanos Hadjikyriakou"
+    assert member.name == "Phanos"
     assert member.position == "Co-founder & CEO"
     assert (
         member.fun_fact

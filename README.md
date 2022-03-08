@@ -34,7 +34,7 @@ docker-compose up -d
 ### 3. Create a superuser account:
 
 ```bash
-docker-compose exec members python manage.py createsuperuser
+docker-compose exec app python manage.py createsuperuser
 ```
 
 ### 4. Check everything is running
@@ -48,7 +48,7 @@ docker-compose exec members python manage.py createsuperuser
 ### 5. Run the tests with coverage
 
 ```bash
-docker-compose exec members pytest -p no:warnings --cov=.
+docker-compose exec app pytest -p no:warnings --cov=.
 ```
 
 ### 6. Stop the containers
@@ -62,7 +62,6 @@ docker-compose stop
 ```bash
 docker-compose down
 ```
-
 
 ---
 ---
